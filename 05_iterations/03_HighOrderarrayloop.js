@@ -32,5 +32,5 @@ const greeting ="HELLO   WORLD"
 
    }
       for( const [key,value] of myobjet){
-        console.log(key, ':-',value) // runerror not declear atb this method for iteations for object  
+        console.log(key, ':-',value) // runerror not declear atb this method for iterations for object  
       }

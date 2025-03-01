@@ -1,4 +1,4 @@
-/*
+/*   FILTER TRRUE OR FALSE CASE RETURN HOGA 
 const mynums =[2,7,8,9,5,7,3,2,1,]
 const newNums =mynums.filter((num) =>{
     return num > 4

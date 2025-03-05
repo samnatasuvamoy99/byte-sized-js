@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM || keep codeing keep smileing</title>
+  <style>
+         .cssstyle{
+           background-color: black;
+           color:white;
+           font-size:20px;
+          
+         }
+  </style>
+</head>
+<body class="cssstyle">
+   <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day"> Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="dya"> Thursday</div>
+   </div>
+</body>
+    <script>
+       const parent= document.querySelector('.parent')  // this cmd find your class
+       /*
+       //.log(parent);
+
+        //.log(parent.children); // to sow children class
+        //.log(parent.children[1].innerHTML) // to  showing the node text value into the div
+*/
+   /*
+    for (let i = 0; i < parent.children.length; i++) {
+         //.log(parent.children[i].innerHTML);  // to showing all node text into the div that you create in children node under the parrent class .
+
+         parent.children[1].style.color="blue"
+      
+    }*/
+       parent.children[1].style.color="blue"
+      // //.log(parent.firstElementChild);  // showing first  div 
+
+       const dayone=document.querySelector('.day') // access the children
+       //console.log(dayone)
+       //console.log(dayone.parentElement)
+       //console.log(dayone.nextElementSibling) // go to the next element that first you declear
+       
+       
+       <!--imp-->
+       console.log("NODES:",parent.childNodes);
+
+    </script>
+</html>

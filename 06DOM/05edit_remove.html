@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom  | edit and remove element</title>
+</head>
+<body style="background-color: black; color: white;width:200px;">
+       <ul class="language">
+         <li>javascript</li>
+       </ul>
+</body>
+   <!-- mean section -->
+    <script>
+      /*
+          function addlanguage(languagename){
+             const li = document.createElement('li') // to create new  list element in the html.
+             li.innerHTML =`${languagename}`
+             document.querySelector('.language').appendChild(li)
+          }
+          addlanguage("python")
+          addlanguage("typescript")
+          addlanguage("c++")
+          addlanguage("rust")   // this the basic ida too add any element into the class that you previously create in html 
+          */
+
+           //optimition way 
+          function addoptfriend(language){
+            const li =document.createElement('li')
+            li.appendChild(document.createTextNode(language))  // previous ke tara pura tree ko traverse nahe kerna par re he 
+             document.querySelector('.language').appendChild(li);
+          }
+            addoptfriend('suvamoy')
+            addoptfriend('nabanita')
+            addoptfriend('bera')
+             
+
+
+          //EDIT----->>>>>>
+              const secondlang=document.querySelector("li:nth-child(2)")
+              
+             //secondlang.innerHtml="mojo" //---> brute forse method he 
+              const newli = document.createElement('li')
+              newli.textContent="samanta"
+            secondlang.replaceWith(newli)
+
+// outerhtml changeing 
+const firstlang = document.querySelector("li:first-child");
+firstlang.outerHTML = '<li>TypeScript</li>';
+
+
+
+//remove
+   const lastlang =document.querySelector("li:last-child")
+   lastlang.remove()
+
+    </script>
+</html>

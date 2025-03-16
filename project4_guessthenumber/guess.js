@@ -1,0 +1,82 @@
+const randomnumber= parseInt(Math.random() * 100 + 1)
+
+const submit=document.querySelector('#subt');
+const userinput = document.querySelector('#guessField');
+const guesslots = document.querySelector('.guesses');
+const lastresult = document.querySelector('.lastResult');
+const lowerhi = document.querySelector('.lowOrHi');
+
+const startover = document.querySelector('.resultParas');
+
+const p = document.createElement('p');
+
+let prevguess=[];  // to store prev guess into the array that we showing the user.
+
+ let numguess=1; // user guess start  they try < 10
+
+ let playGame = true;
+   if(playGame){ // user avaliable to play the game ???
+        submit.addEventListener('click' , function(gu){
+               gu.preventDefault();
+              const guess= parseInt(userinput.value);
+              validateGuess(guess);
+
+        });
+   }
+
+ function validateGuess(guess){
+   // to check  value will be actually present 1 -> 100 ranges ?
+   if(isNaN(guess)){
+    alert('please a valid number')
+   }
+   else if ( guess < 1){
+    alert('please a valid number')
+   }
+   else if ( guess > 100){
+    alert('please a number less then 100')
+   }
+   else{
+      prevguess.push(guess)
+      if(numguess === 11){
+        displayGuess(guess)
+        displayMessage(`game over : Random number was ${randomnumber}`)
+        endGame();
+
+      }
+      else{
+        displayGuess(guess)
+        checkGuess(guess)
+      }
+   }
+
+ }
+
+ function checkGuess(guess){
+  //  to check the number is euqal to random number ? then call display method lower or high >
+   
+
+ }
+
+ function displayGuess(guess){
+     // clean the value that you write into the submit box and 
+ }
+
+ function displayMessage(message){
+    // to print the number low or high?
+
+ }
+
+ function endGame(){
+  
+ }
+
+function newGame(){
+
+}
+
+
+
+
+
+
+

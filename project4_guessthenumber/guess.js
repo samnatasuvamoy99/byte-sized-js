@@ -38,14 +38,14 @@ let prevguess=[];  // to store prev guess into the array that we showing the use
    else{
       prevguess.push(guess)
       if(numguess === 11){
-        displayGuess(guess)
-        displayMessage(`game over : Random number was ${randomnumber}`)
+        displayGuess(guess);
+        displayMessage(`game over : Random number was ${randomnumber}`);
         endGame();
 
       }
       else{
-        displayGuess(guess)
-        checkGuess(guess)
+        displayGuess(guess);
+        checkGuess(guess);
       }
    }
 
@@ -53,17 +53,33 @@ let prevguess=[];  // to store prev guess into the array that we showing the use
 
  function checkGuess(guess){
   //  to check the number is euqal to random number ? then call display method lower or high >
-   
+    if ( guess === randomnumber){
+      displayMessage(`you guessed it right`)
+      endGame();
+    }
+    else if(guess < randomnumber){
+          displayMessage(`number is Too low `);
+    }
+    else if (guess > randomnumber){
+      displayMessage(`number is Too high `);
+}
 
  }
 
  function displayGuess(guess){
      // clean the value that you write into the submit box and 
+     userinput.valu=''
+     guesslots.innerHTML +=`${guess}`
+     numguess++;
+     lastresult.innerHTML=`${10 -numguess}`
+
  }
 
  function displayMessage(message){
     // to print the number low or high?
+    lowerhi.innerHTML=`<h2>${message}</h2>`
 
+  
  }
 
  function endGame(){

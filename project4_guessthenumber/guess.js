@@ -68,26 +68,42 @@ let prevguess=[];  // to store prev guess into the array that we showing the use
 
  function displayGuess(guess){
      // clean the value that you write into the submit box and 
-     userinput.valu=''
-     guesslots.innerHTML +=`${guess}`
+     userinput.value="";
+     guesslots.innerHTML +=`${guess}:  `;
      numguess++;
-     lastresult.innerHTML=`${10 -numguess}`
+     lastresult.innerHTML=`${11 - numguess} `;
 
  }
 
  function displayMessage(message){
     // to print the number low or high?
-    lowerhi.innerHTML=`<h2>${message}</h2>`
+    lowerhi.innerHTML=`<h2>${message}</h2>`;
 
   
  }
 
  function endGame(){
-  
+   userinput.value="";
+   userinput.setAttribute('disabled' , '');
+   p.classList.add('button')
+   p.innerHTML =` <h1 id ="newGame"> start new Game </h1>`;
+   startover.appendChild(p);
+   playGame = false;
+   newGame();
  }
 
 function newGame(){
-
+         const newgamebutton =document.querySelector('#newGame');
+         newgamebutton.addEventListener('click' , function(bu){
+             randomnumber =parseInt(Math.random() * 100 + 1);
+             prevguess =[];
+             numguess=1;
+             guesslots.innerHTML = ''
+             lastresult.innerHTML=`${11 - numguess} `;
+             userinput.removeAttribute('disabled')
+             startover.removeChild(p)
+             playGame=true;
+         });
 }
 
 

@@ -19,7 +19,53 @@
    </div>
 </body>
 <script>
-      document.getElementById('owl').onclick = function(){
-        alert("owl click")
-      }
+       // parna hoga 
+       <!--- type, timestamp , defaultprevented , target , toElement , srcElement , currentTarget , clienX , clientY , screenX, screenY, altKey , ctrlKey , shiftKey , keycode-->
+    
+    //document.getElementById('owl').onclick = function(){
+      //alert("owl click")
+
+     // }
+
+      /* another method that will apply .declear event listener and write a false imp* ___> event propogation called 
+        
+       document.getElementById('owl').addEventListener('click' , function(){
+             alert("owl clicked again")
+       } , false)
+       */
+
+       /*
+       document.getElementById('images').addEventListener('click' , function(e){
+             alert("clicked  inside all");
+             e.stopPropagation();
+       } , false)
+
+       document.getElementById('owl').addEventListener('click' , function(e){
+                console.log("owl clicked");
+                e.stopPropagation() // to stop  last alret clicked....
+       } , false)
+
+       */
+
+       //  cahnge defoult behaviour in google click not open website 
+       document.getElementById('google').addEventListener('click' , function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("google clicked");
+    
+       } , false)
+
+     // <!---small project---> 
+
+       document.querySelector('#images').addEventListener('click' , function(e){
+           if (e.target.TagName == 'IMG'){
+            let removeit = e.target.parentNode
+            removeit.remove();
+           }
+
+       } , false)
+
+
+
 </script>
+</html>

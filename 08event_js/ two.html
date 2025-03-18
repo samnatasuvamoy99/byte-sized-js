@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+     <h1>Today learning event in javascript</h1>
+     <button id="stop">STOP</button>
+</body>
+    <script>
+          const saysuvamoy =function(){
+            console.log("suvamoy");
+          }
+           const changeText =function(){
+            document.querySelector('h1').innerHTML ="best js series"
+           }
+            
+          const change =setTimeout(changeText , 2000) // in this cmd to print suvamoy 1st then  Affter 2 sec time -print suvamoy 
+          
+         document.querySelector('#stop').addEventListener('click' , function(){
+          clearTimeout(change) // to stop text node before print tha timeing ...you declear this 
+          
+          console.log("STOPPED")
+         })
+          
+          
+    </script>
+</html>

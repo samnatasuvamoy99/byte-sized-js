@@ -18,3 +18,7 @@
     send()
 
     this.responce---> it will track which function that you do any operation; and  responce track your api or url that you share your vscode;
+    # promise
+    promise have two part 
+    1.resolve
+    2.reject

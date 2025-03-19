@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API</title>
+</head>
+<body>
+  0	UNSENT	Client has been created. open() not called yet.
+</br>
+  1	OPENED	open() has been called.
+</br>
+  2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+</br>
+  3	LOADING	Downloading; responseText holds partial data.
+</br>
+  4	DONE	The operation is complete.
+</body>
+<script>
+         const requesturl ='https://api.github.com/users/samnatasuvamoy99'
+      
+        // object make
+         const xhr= new XMLHttpRequest();
+        
+         //track  or request vaje
+         xhr.open('GET',requesturl) // kis type ke method or string dalna pare ga 
+         
+            // continuous track kerna ke liye 
+       xhr.onreadystatechange=function(){
+
+      console.log(xhr.readyState);
+
+      if (xhr.readyState === 4){
+        
+         const data = JSON.parse(this.responseText) //  this is format ->to convert any data that you need
+            console.log(data) // you show your url or api.
+        console.log(data.location);//your specefic enquriy fullfil
+      }
+     }
+        
+         
+         xhr.send()
+
+</script>
+</html>

@@ -62,3 +62,25 @@ promisefour.then((user) =>{
 .catch(function(error){ // jo error yega show kera ge
   console.log(error);
 })
+.finally(() => console.log("The promise is either resolve and rejected"));
+
+
+//five
+const promisefive= new Promise(function(resolve,reject){
+  setTimeout(function(){
+    let error=true;
+     if(!error){
+      resolve({username:"suvamoy" , email:"suvamoysamanta900@gmail.com" ,password:"suvamoy@#wktrt"})
+     }
+     else{
+      reject('ERROR:js went wrong')
+     }
+  },1000)
+})
+
+async function consumepromisefive(){
+    const response= await promisefive
+    console.log(response);
+}
+
+consumepromisefive()

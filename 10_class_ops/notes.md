@@ -19,3 +19,6 @@ Abstraction
 Encapsulation
 Inheritance
 polymorphism
+
+# new
+this keyword is constracter function that make multiple instances . 

@@ -1,3 +1,5 @@
+//obj literal
+
 const user = {
   username:"suvamoy99",
   password:"suvamoy775hfh",

@@ -116,3 +116,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
 .catch((error) => console.log(error))
 
 
+
+
+/// doubt first code will be run 1st but why last ????? imp
+
+

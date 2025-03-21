@@ -1,3 +1,0 @@
-# javascript and classes
-
-## OOps

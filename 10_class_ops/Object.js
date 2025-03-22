@@ -1,4 +1,4 @@
-// prototype
+// prototype intro
 function multiple(num){
    return num*5;
 }

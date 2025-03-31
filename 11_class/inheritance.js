@@ -10,12 +10,11 @@ class user{
 
 // teacher class ko add kerna he user class se 
 
-class Teacher {
+class Teacher extends user {
      constructor(username,email,password){
-      super(username)
-      this.email=email
-      
-      this.password=password
+      super(username);
+      this.email=email;
+      this.password=password;
      }
      addcourse(){
           console.log(`A new course was add by ${this.username}`);

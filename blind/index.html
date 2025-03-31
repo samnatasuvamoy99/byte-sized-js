@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React</title>
+</head>
+<body>
+   <button> button click</button>
+</body>
+<script>
+       class React{
+           constructor(){
+                 this.library="React"
+                 this.server=" https://www.youtube.com/watch?v=75dMiOY_4ac&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=46"
+
+                  // requirement
+                  document
+                  .querySelector('button')
+                  .addEventListener('click' ,this.handleclick.bind(this))  // to help  access console the server and all obj  that declear consturcter prev 
+           }
+             
+           handleclick(){
+              console.log('button successfuly clicked');
+              console.log(this.server)
+           }
+
+       }
+       const app= new React()
+</script>
+
+</html>

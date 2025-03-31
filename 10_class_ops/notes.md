@@ -29,3 +29,10 @@ prototype  key word will use to add any number of function  under  the main clas
 2.   if you have add to class then use extends key word
 
 3.super key word automaticlly know which class that you call any obj.name(username);
+
+## static 
+ not access any funtion when you use this 
+
+ 
+ ## 
+ bind --> it will help and force to access all element that you declear prev,,,,.....
